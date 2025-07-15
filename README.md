@@ -3,11 +3,10 @@ Objective
 The goal of this task is to predict the 5-day forward volatility of a stock or index by identifying different market regimes using clustering on technical indicators. Each regime has a dedicated model trained on its historical behavior, making the pipeline adaptive and behavior-aware.
 Pipeline Overview
 1. Data Collection:
-- Fetched OHLCV data from Yahoo Finance for ^NSEI from 2015 to 2024.
+- Fetched OHLCV data from Yahoo Finance for ^NSEI from 2022 to 2024.
 
 2. Feature Engineering:
 - Computed technical indicators: RSI, MACD Histogram, ADX, Bollinger Band Width, Volume % change.
-- Integrated Yang-Zhang volatility as a daily volatility feature.
 
 3. Regime Detection:
 - Normalized regime indicators.
@@ -32,7 +31,7 @@ Pipeline Overview
 - Inspected distribution of target volatility.
 Key Highlights & Learnings
 - Regime-awareness significantly improves modeling by reducing behavioral noise.
-- Yang-Zhang volatility added robustness as a feature without being used as the target.
+- Yang-Zhang volatility added robustness as a feature without being used as the target.{the yang-Zhang model was calculated separately, but not added in the final algo}
 - Separate models for different market moods outperformed single-model approaches.
 - Pipeline is modular, interpretable, and scalable to other indices and time frames.
 Conclusion
